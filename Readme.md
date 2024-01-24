@@ -1,6 +1,3 @@
-# RELÓGIO DIGITAL JS
----
-> Projeto usando JS / HTML / CSS !
 
    PROJETO INTEGRADO !
    
