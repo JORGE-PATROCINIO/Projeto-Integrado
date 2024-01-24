@@ -1,0 +1,105 @@
+// inserir as requisições
+
+POST http://localhost:3000/api/services
+// indica o formato que vai chegar na api
+Content-Type: application/json 
+
+// indica os dados que vão chegar na api
+{
+      "name": "Decoração",
+      "description": "Escolha a decoração para sua festa, e nós a montamos.",
+      "price": 1400,
+      "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+    }
+###
+
+GET http://localhost:3000/api/services
+
+###
+
+GET http://localhost:3000/api/services/65af6c25628250f3b109420c
+
+###
+DELETE http://localhost:3000/api/services/65af6c25628250f3b109420b
+
+###
+PUT  http://localhost:3000/api/services/65afd217628250f3b109420c
+Content-Type: application/json 
+
+// indica os dados que vão chegar da api
+{
+    "name":"Atualização Teste",
+    "description": "alguma descrição",
+    "price": 1400,
+    "image":"https://google.com.br"
+}
+
+// MÉTODOS PARA A CRIAÇÃO DAS FESTAS
+
+###
+
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title":"Meu evento",
+    "author": "Jorge Augusto",
+    "description": "festa de aniversário",
+    "budget": 9000,
+    "image":"https://google.com.br",
+    "services":[
+        {
+            "name":"Algum Serviço 1",
+            "description": "alguma descrição",
+            "price": 2000,
+            "image":"https://google.com.br"
+        },
+        {
+            "name":"Algum Serviço 2",
+            "description": "alguma descrição",
+            "price": 3000,
+            "image":"https://google.com.br"
+        }
+    ]
+}
+
+
+###
+
+GET http://localhost:3000/api/parties
+
+
+
+###
+
+GET http://localhost:3000/api/parties/65b003e9a28d88ef0cb6b435
+
+###
+DELETE http://localhost:3000/api/parties/65af6c25628250f3b109420b
+
+###
+
+PUT  http://localhost:3000/api/parties/65b013d82137c0451ea055da
+Content-Type: application/json 
+
+{
+    "title":"Meu evento",
+    "author": "Jorge Augusto",
+    "description": "festa de aniversário",
+    "budget": 9000,
+    "image":"https://google.com.br",
+    "services":[
+        {
+            "name":"Algum Serviço 1",
+            "description": "alguma descrição",
+            "price": 3000,
+            "image":"https://google.com.br"
+        },
+        {
+            "name":"Algum Serviço 2",
+            "description": "alguma descrição",
+            "price": 3000,
+            "image":"https://google.com.br"
+        }
+    ]
+}
